@@ -1,0 +1,20 @@
+<h1> <%= @person.name %> </h1>
+
+<blockquote>
+  age: <%= @person.age %>
+  <br/>
+  hair: <%= @person.hair_color %>
+  <br/>
+  eyes: <%= @person.eye_color %>
+  <br/>
+  gender: <%= @person.gender %>
+  <br/>
+  alive: <%= @person.alive %>
+  <br/>
+</blockquote>
+
+<%= link_to 'Edit', edit_person_path %>
+<%= link_to 'Delete', person_path(@person),
+      method: :delete,
+      data: { confirm: 'Really Delete?'} %>
+<%= link_to 'All People', people_path %>

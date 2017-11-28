@@ -1,0 +1,20 @@
+<h1>People</h1>
+<% if @people.any? %>
+  <% @people.each do |person| %>
+    <h4>
+      <%= link_to person.name, person_path(person), class: 'link' %>
+    </h4>
+    <i>
+      <%= link_to 'Edit', edit_person_path(person) %>
+      <%= link_to 'Delete', person_path(person),
+            method: :delete,
+            data: { confirm: 'Really Delete?'} %>
+    </i>
+
+  <% end %>
+
+  <% else %>
+    <h4> Nobody here. <h4>
+<% end %>
+
+<%= link_to 'New Person', new_person_path %>
