@@ -38,6 +38,8 @@ class PeopleController < ApplicationController
     redirect_to people_path
   end
 
+  private
+
   def person_params
     params.require(:person).permit(:name, :age, :hair_color, :eye_color, :gender, :alive)
   end

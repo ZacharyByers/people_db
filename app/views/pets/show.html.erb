@@ -1,0 +1,18 @@
+<h1> <%= @pet.name %> </h1>
+
+<blockquote>
+  age: <%= @pet.age %>
+  <br/>
+  kind: <%= @pet.kind %>
+  <br/>
+  gender: <%= @pet.gender %>
+  <br/>
+  belongs to: <%= Person.find(@pet.person_id).name %>
+</blockquote>
+
+<%= link_to 'Edit', edit_pet_path, class: 'btn btn-primary' %>
+<%= link_to 'Delete', pet_path(@pet),
+                      method: :delete,
+                      data: { confirm: 'Really Delete?' },
+                      class: 'btn btn-danger' %>
+<%= link_to 'Owner', person_path(@pet.person_id), class: 'btn btn-primary' %>

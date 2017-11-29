@@ -1,4 +1,4 @@
-<div id = 'entry-list'>
+<div class = 'entry-list'>
   <h1>People</h1>
 
     <% if @people.any? %>
@@ -11,7 +11,8 @@
             <%= link_to 'Edit', edit_person_path(person), class: 'btn btn-outline-primary' %>
             <%= link_to 'Delete', person_path(person),
                   method: :delete,
-                  data: { confirm: 'Really Delete?'}, class: 'btn btn-outline-danger' %>
+                  data: { confirm: 'Really Delete?'},
+                  class: 'btn btn-outline-danger' %>
           </i>
         </div>
         <br/>
