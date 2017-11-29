@@ -10,8 +10,8 @@ def cc (name, age, hair, eye, gender, alive = true)
   Person.create(name: name, age: age, hair_color: hair, eye_color: eye, gender: gender, alive: alive)
 end
 
-cc('Zach', 25, 'brown', 'brown', 'm')
-cc('George Washington', 300, 'white', 'blue', 'm', false)
-cc('Bob', 40, 'black', 'green', 'm')
-cc('Martha', 298, 'white', 'hazel', 'f', false)
-cc('Jesse', 28, 'blue', 'brown', 't')
+cc('Zach', 25, 'brown', 'brown', 'M')
+cc('George Washington', 300, 'white', 'blue', 'M', false)
+cc('Bob', 40, 'black', 'green', 'M')
+cc('Martha', 298, 'white', 'hazel', 'F', false)
+cc('Jesse', 28, 'blue', 'brown', 'T')

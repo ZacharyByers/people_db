@@ -1,22 +1,32 @@
-<h1>New Person</h1>
-<%= form_for @person do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name, required: true %>
+<div class = 'container'>
+  <h1>New Person</h1>
+  <%= form_for @person do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name, required: true %>
+    <br/>
+    <%= f.label :age %>
+    <%= f.number_field :age, required: true %>
+    <br/>
+    <%= f.label :hair_color %>
+    <%= f.text_field :hair_color, required: true%>
+    <br/>
+    <%= f.label :eye_color %>
+    <%= f.text_field :eye_color, required: true %>
+    <br/>
+    <div class = 'input-field'>
+      <%= f.label :gender %>
+      <%= f.select :gender, ['NB', 'F', 'M', 'TM', 'TF'], class: 'browser-default' %>
+    </div>
+    <br/>
+    <div class = 'input-field'>
+      <%= f.label :alive %>
+      <%= f.check_box :alive, :checked => true %>
+    </div>
+    <br/>
+    <%= f.submit %>
+  <% end %>
+
   <br/>
-  <%= f.label :age %>
-  <%= f.text_field :age, required: true %>
-  <br/>
-  <%= f.label :hair_color %>
-  <%= f.text_field :hair_color, required: true %>
-  <br/>
-  <%= f.label :eye_color %>
-  <%= f.text_field :eye_color, required: true %>
-  <br/>
-  <%= f.label :gender %>
-  <%= f.select :gender, ['NB', 'F', 'M', 'TM', 'TF'] %>
-  <br/>
-  <%= f.label :alive %>
-  <%= f.check_box :alive, :checked => true %>
-  <br/>
-  <%= f.submit %>
-<% end %>
+
+  <%= link_to 'Back', people_path, class: 'btn btn-primary' %>
+</div>

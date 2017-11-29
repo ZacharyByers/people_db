@@ -13,8 +13,8 @@
   <br/>
 </blockquote>
 
-<%= link_to 'Edit', edit_person_path %>
+<%= link_to 'Edit', edit_person_path, class: 'btn btn-primary' %>
 <%= link_to 'Delete', person_path(@person),
       method: :delete,
-      data: { confirm: 'Really Delete?'} %>
-<%= link_to 'All People', people_path %>
+      data: { confirm: 'Really Delete?'}, class: 'btn btn-danger' %>
+<%= link_to 'All People', people_path, class: 'btn btn-primary' %>
